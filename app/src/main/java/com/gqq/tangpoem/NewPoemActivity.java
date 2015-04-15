@@ -8,6 +8,8 @@ import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.*;
 
+import peter.itu.util.T;
+
 public class NewPoemActivity extends Activity implements OnClickListener {
 
 	private Button btnSubmit;

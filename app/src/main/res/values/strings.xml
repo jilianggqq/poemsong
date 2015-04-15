@@ -9,5 +9,6 @@
     <string name="title_activity_msg">注释</string>
     <string name="title_activity_item_test">ItemTestActivity</string>
     <string name="title_activity_simple_adapter_test">SimpleAdapterTestActivity</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>

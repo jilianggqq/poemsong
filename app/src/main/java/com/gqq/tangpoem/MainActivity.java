@@ -1,30 +1,16 @@
 package com.gqq.tangpoem;
 
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.controller.UMServiceFactory;
-import com.umeng.socialize.controller.UMSocialService;
-import com.umeng.socialize.media.UMImage;
-
-import android.R.anim;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnKeyListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.DialogInterface.OnKeyListener;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.os.Parcelable;
 import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
@@ -42,11 +28,20 @@ import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import peter.itu.util.L;
+import peter.itu.util.T;
 
 /**
  * main activity
@@ -179,13 +174,12 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Log.d(TAG_SYSTEM, "oncreate");
+        L.d(TAG_SYSTEM, "oncreate");
 		requestWindowFeature(Window.FEATURE_NO_TITLE);//
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		System.out.println("init");
 		init();
-
 		initmenu();
 	}
 
@@ -398,7 +392,6 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
 
 	@Override
 	public boolean onMenuOpened(int featureId, Menu menu) {
-
 		showmenu();
 		return false;
 		// 返回为true 则显示系统menu

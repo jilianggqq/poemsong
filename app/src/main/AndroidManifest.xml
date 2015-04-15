@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gqq.tangpoem"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -11,51 +11,50 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_LOGS" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".PoemApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:label="@string/app_name">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".NewPoemActivity"
-            android:label="@string/title_activity_new_poem" >
-        </activity>
+            android:label="@string/title_activity_new_poem"></activity>
         <activity
             android:name=".ListPoemActivity"
-            android:label="@string/title_activity_list_fruit" >
-        </activity>
+            android:label="@string/title_activity_list_fruit"></activity>
         <activity
             android:name=".MsgActivity"
-            android:label="@string/title_activity_msg" >
-        </activity>
+            android:label="@string/title_activity_msg"></activity>
 
         <!-- ###################添加UmengAppkey###################### -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="546471bffd98c568180001f3" >
-        </meta-data>
+            android:value="546471bffd98c568180001f3"></meta-data>
+
+        <activity
+            android:name="com.gqq.test.TestActivity"
+            android:label="@string/title_activity_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
