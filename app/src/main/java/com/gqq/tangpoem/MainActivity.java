@@ -48,6 +48,9 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 
+/**
+ * main activity
+ */
 public class MainActivity extends Activity implements OnGestureListener, OnTouchListener {
 
 	class DoubuleTapClass implements OnDoubleTapListener {
