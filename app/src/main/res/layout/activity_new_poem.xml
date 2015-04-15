@@ -1,0 +1,162 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272822" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:scrollbars="vertical"
+        tools:context="com.gqq.tangpoem.NewPoemActivity" >
+
+        <EditText
+            android:id="@+id/edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:textColor="#CFBFAD" />
+
+        <LinearLayout
+            android:id="@+id/layoutCipai"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edtContent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="词牌："
+                android:textColor="#CFBFAD" />
+
+            <EditText
+                android:id="@+id/edtCipai"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#CFBFAD" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/layoutCipai"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="题目："
+                android:textColor="#CFBFAD" />
+
+            <EditText
+                android:id="@+id/edtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#CFBFAD" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAuthor"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/layoutTitle"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作者："
+                android:textColor="#CFBFAD" />
+
+            <EditText
+                android:id="@+id/edtAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#CFBFAD"
+                android:width="100dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutType"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/layoutAuthor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="类型："
+                android:textColor="#CFBFAD" />
+
+            <RadioGroup
+                android:id="@+id/rdopType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rdoTangshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="诗"
+                    android:textColor="#CFBFAD" />
+
+                <RadioButton
+                    android:id="@+id/rdoSongci"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="词"
+                    android:textColor="#CFBFAD" />
+
+                <RadioButton
+                    android:id="@+id/rdoQita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其它"
+                    android:textColor="#CFBFAD" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/layoutType"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:text="取消" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

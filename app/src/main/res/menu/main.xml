@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gqq.tangpoem.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/action_add"
+        android:showAsAction="never"
+        android:title="添加"/>
+    <item
+        android:id="@+id/action_del"
+        android:icon="@drawable/menu_delete"
+        android:showAsAction="never"
+        android:title="删除"/>
+    <item
+        android:id="@+id/action_mod"
+        android:showAsAction="never"
+        android:title="修改"/>
+    <item
+        android:id="@+id/action_list"
+        android:showAsAction="never"
+        android:title="目录"/>
+
+</menu>
