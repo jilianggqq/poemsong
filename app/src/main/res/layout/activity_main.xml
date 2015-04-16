@@ -7,27 +7,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.gqq.tangpoem.MainActivity" >
+    tools:context="com.gqq.tangpoem.MainActivity">
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#272822"
+        android:background="@color/PoemMainBack"
         android:gravity="center_horizontal"
         android:singleLine="true"
-        android:textColor="#CFBFAD"
+        android:textColor="@color/PoemTitle"
         android:textSize="33sp" />
 
     <TextView
         android:id="@+id/tvContent"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/tvTitle"
-        android:background="#272822"
-        android:scrollbars="vertical"
-        android:singleLine="false"
-        android:textColor="#BDA257"
-        android:textSize="30sp" />
+        style="@style/poemContent"
+        android:layout_below="@id/tvTitle" />
 
 </RelativeLayout>

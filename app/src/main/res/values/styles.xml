@@ -16,5 +16,13 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-
+    <style name="poemContent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/PoemMainBack</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textColor">@color/PoemFontColor</item>
+        <item name="android:textSize">30sp</item>
+    </style>
 </resources>
