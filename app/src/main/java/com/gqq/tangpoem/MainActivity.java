@@ -12,6 +12,7 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.os.PersistableBundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -145,7 +146,13 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
 
 	private int cId;
 	private Poem cPoem;
-	private boolean isInsecondItem = false;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+    }
+
+    private boolean isInsecondItem = false;
 
 	private String errorMsg = null;
 

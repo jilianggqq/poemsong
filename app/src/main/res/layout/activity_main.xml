@@ -11,13 +11,7 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/PoemMainBack"
-        android:gravity="center_horizontal"
-        android:singleLine="true"
-        android:textColor="@color/PoemTitle"
-        android:textSize="33sp" />
+        style="@style/poemTitle" />
 
     <TextView
         android:id="@+id/tvContent"
