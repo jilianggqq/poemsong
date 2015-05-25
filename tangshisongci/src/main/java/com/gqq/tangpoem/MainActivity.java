@@ -308,111 +308,8 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
                                     }).setNegativeButton("否", null).show();
                             break;
                         case ITEM_SHARE:
-                            Log.d("ShareTest", "doshare");
-                            ShareSDK.initSDK(MainActivity.this);
-                            OnekeyShare oks = new OnekeyShare();
-                            // 分享时Notification的图标和文字
-//            oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
-                            oks.setText("轩辕剑");
-                            oks.setImageUrl("http://images.17173.com/2012/swd//2012/06/18/s20120618004301778.jpeg");
-                            oks.addHiddenPlatform(TencentWeibo.NAME);
-                            oks.addHiddenPlatform(ShortMessage.NAME);
-//            ShortMessage.Name
-                            // 启动分享GUI
-                            oks.show(MainActivity.this);
+                            doShare();
                             break;
-                            // umeng 的分享还是有问题
-                            // // 首先在您的Activity中添加如下成员变量
-                            // final UMSocialService mController =
-                            // UMServiceFactory.getUMSocialService("com.umeng.share");
-                            // mController.getConfig().setPlatforms(SHARE_MEDIA.WEIXIN,
-                            // SHARE_MEDIA.WEIXIN_CIRCLE,
-                            // SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.SINA,
-                            // SHARE_MEDIA.TENCENT,
-                            // SHARE_MEDIA.DOUBAN, SHARE_MEDIA.RENREN);
-                            // // 设置分享内容
-                            // mController.setShareContent("友盟社会化组件（SDK）让移动应用快速整合社交分享功能，http://www.umeng.com/social");
-                            // mController.openShare(MainActivity.this, false);
-
-                            // tvContent
-
-//						String contentDetails = "content details";
-//						String contentBrief = "ddd";
-//						String shareUrl = "www.baidu.com";
-//						Intent intent = new Intent(Intent.ACTION_SEND);
-//						intent.setType("text/plain");
-//						// intent.setPackage("com.tencent.mm");
-//						// intent.setPackage("com.sina.weibo");
-//						// intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
-//						// intent.putExtra(Intent.EXTRA_TEXT, "你好 ");
-//						// intent.putExtra(Intent.EXTRA_TITLE, "我是标题");
-//						// intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//						// startActivity(Intent.createChooser(intent, "请选择"));
-//
-//						List<ResolveInfo> resInfo = getPackageManager().queryIntentActivities(intent, 0);
-//						if (!resInfo.isEmpty()) {
-//							List<Intent> targetedShareIntents = new ArrayList<Intent>();
-//							for (ResolveInfo info : resInfo) {
-//								Intent targeted = new Intent(Intent.ACTION_SEND);
-//								targeted.setType("text/plain");
-//								ActivityInfo activityInfo = info.activityInfo;
-//								Log.d("package", String.format("packageName:%s,name:%s", activityInfo.packageName,
-//										activityInfo.name));
-//
-//								// judgments : activityInfo.packageName,
-//								// activityInfo.name, etc.
-//								if (activityInfo.packageName.contains("bluetooth")
-//										|| activityInfo.packageName.contains("android.mms")
-//										|| activityInfo.packageName.contains("sec.android.app.FileShareClient")
-//										|| activityInfo.packageName.contains("bluecrane.calendar")
-//										|| activityInfo.packageName.contains("alibaba.mobileim")
-//										|| activityInfo.packageName.contains("renren.mobile.android")
-//										|| activityInfo.packageName.contains("com.skype.rove")
-//										|| activityInfo.packageName.contains("om.evernote")
-//										|| activityInfo.packageName.contains("om.evernote")
-//										|| activityInfo.packageName.contains("tencent.qqpimsecure")
-//										|| activityInfo.packageName.contains("tencent.mm")
-//										|| activityInfo.packageName.contains("tencent.mobile")
-//										|| activityInfo.packageName.contains("baidu.netdisk")
-//
-//								) {
-//									continue;
-//								}
-//
-//								targeted.putExtra(Intent.EXTRA_TITLE, tvTitle.getText().toString());
-//								String poem_contentString = tvContent.getText().toString();
-//								String content = poem_contentString.length() > 110 ? poem_contentString.substring(0,
-//										110) : poem_contentString;
-//								content = String.format("%s...来自诗词精选，下载网址：%s", content, APK_URL);
-//								targeted.putExtra(Intent.EXTRA_TEXT, content);
-//								targeted.setPackage(activityInfo.packageName);
-//								targetedShareIntents.add(targeted);
-//							}
-//
-//							Intent chooserIntent = Intent.createChooser(targetedShareIntents.remove(0),
-//									"Select app to share");
-//							if (chooserIntent == null) {
-//								return;
-//							}
-//
-//							// A Parcelable[] of Intent or LabeledIntent objects
-//							// as set with
-//							// putExtra(String, Parcelable[]) of additional
-//							// activities to place
-//							// a the front of the list of choices, when shown to
-//							// the user with a
-//							// ACTION_CHOOSER.
-//							chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS,
-//									targetedShareIntents.toArray(new Parcelable[] {}));
-//
-//							try {
-//								startActivity(chooserIntent);
-//							} catch (android.content.ActivityNotFoundException ex) {
-//								Toast.makeText(MainActivity.this, "Can't find share component to share",
-//										Toast.LENGTH_SHORT).show();
-//							}
-//						}
-//						break;
                         case ITEM_RETURN:
                             menuGrid.setAdapter(getMenuAdapter(menu_name_array, menu_image_array));
                             isInsecondItem = false;
@@ -422,6 +319,26 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
                 menuDialog.dismiss();
             }
         });
+    }
+
+    private void doShare() {
+        Log.d("DoShare", "start to do share");
+        ShareSDK.initSDK(MainActivity.this);
+        OnekeyShare oks = new OnekeyShare();
+        // 分享时Notification的图标和文字
+//            oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
+//                            oks.setImageUrl("http://images.17173.com/2012/swd//2012/06/18/s20120618004301778.jpeg");
+        String titile = tvTitle.getText().toString();
+        String content = tvContent.getText().toString();
+
+        //按照标题：内容的方式分享诗词。
+        oks.setText(titile + "\n" + content);
+        oks.setViewToShare(findViewById(R.id.rtlMain));
+        oks.setViewToShare(findViewById(R.id.edtContent));
+        oks.addHiddenPlatform(TencentWeibo.NAME);
+        oks.addHiddenPlatform(ShortMessage.NAME);
+        // 启动分享GUI
+        oks.show(MainActivity.this);
     }
 
     @Override
