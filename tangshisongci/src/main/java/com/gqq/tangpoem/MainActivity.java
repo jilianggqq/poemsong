@@ -331,8 +331,8 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
 //            oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
 //                            oks.setImageUrl("http://images.17173.com/2012/swd//2012/06/18/s20120618004301778.jpeg");
         String titile = tvTitle.getText().toString();
-        String content = tvContent.getText().toString();
-        String url = "download:" + APK_URL;
+        String content = tvContent.getText().toString().substring(0, 60) + "...";
+        String url = "(唐诗宋词)下载地址:" + APK_URL;
 
         //按照标题：内容的方式分享诗词。
         oks.setText(titile + "\n" + content + "\n" + url);
