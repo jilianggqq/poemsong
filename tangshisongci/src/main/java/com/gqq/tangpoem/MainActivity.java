@@ -53,6 +53,7 @@ import peter.itu.util.T;
  */
 public class MainActivity extends Activity implements OnGestureListener, OnTouchListener {
 
+
     class DoubuleTapClass implements OnDoubleTapListener {
 
         @Override
@@ -125,7 +126,8 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
     private TextView tvContent;
     private TextView tvTitle;
 
-    private static final String APK_URL = "http://gqqapp.sinaapp.com/TangPoem.apk";
+    private static final String APK_URL = "https://raw.githubusercontent.com/jilianggqq/poemsong/master/tangshisongci-release.apk";
+    //    private static final Object DOWNLOAD_URL = ;
     private static final String TAG_REFLECTION = "Reflection";
     public static final String TAG_PRESS = "TAG_PRESS";
     public static final String TAG_DATABASE = "DataBase";
@@ -330,9 +332,10 @@ public class MainActivity extends Activity implements OnGestureListener, OnTouch
 //                            oks.setImageUrl("http://images.17173.com/2012/swd//2012/06/18/s20120618004301778.jpeg");
         String titile = tvTitle.getText().toString();
         String content = tvContent.getText().toString();
+        String url = "download:" + APK_URL;
 
         //按照标题：内容的方式分享诗词。
-        oks.setText(titile + "\n" + content);
+        oks.setText(titile + "\n" + content + "\n" + url);
         oks.setViewToShare(findViewById(R.id.rtlMain));
         oks.setViewToShare(findViewById(R.id.edtContent));
         oks.addHiddenPlatform(TencentWeibo.NAME);
