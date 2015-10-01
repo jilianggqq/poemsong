@@ -16,6 +16,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+
     <style name="poemTitle">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -25,8 +26,11 @@
         <item name="android:textColor">@color/PoemTitle</item>
         <item name="android:textSize">33sp</item>
     </style>
+
     <style name="poemContent">
         <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:background">@color/PoemMainBack</item>
         <item name="android:scrollbars">vertical</item>
