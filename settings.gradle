@@ -1,1 +1,1 @@
-include ':commonlibrary', ':tangshisongci'
+include ':commonlibrary', ':tangshisongci', ':fragmentstest'
