@@ -16,12 +16,21 @@
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2">
+
+        </activity>
+        <activity
+            android:name=".MainActivity3"
+            android:label="@string/title_activity_main3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- SoundActivity-->
+        <activity android:name=".SoundActivity"></activity>
+        <!-- DisplayActivity-->
+        <activity android:name=".DisplayActivity"></activity>
     </application>
 
 </manifest>
