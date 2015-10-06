@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:baselineAligned="false"
     android:orientation="horizontal"
-    android:background="@color/Red"
+    android:background="@color/OrangeRed"
     tools:context=".MainActivity">
 
     <fragment
