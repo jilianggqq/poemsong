@@ -12,16 +12,6 @@ public class DensityUtils {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
-    public static float[] getWH(Activity activity) {
-        DisplayMetrics metrics = new DisplayMetrics();
-        activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
-
-        int height = metrics.heightPixels;
-        int width = metrics.widthPixels;
-        float[] wh = {width, height};
-        return wh;
-    }
-
     /**
      * dp转px
      *

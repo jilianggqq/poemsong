@@ -1,9 +1,11 @@
 package peter.itu.util;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
+import android.os.Build;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
@@ -111,4 +113,28 @@ public class ScreenUtils {
 
     }
 
+    public static float[] getWH(Activity activity) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+        int height = metrics.heightPixels;
+        int width = metrics.widthPixels;
+        float[] wh = {width, height};
+        return wh;
+    }
+
+    @SuppressLint("NewApi")
+    public static float[] getRealWH(Activity activity) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            DisplayMetrics metrics = new DisplayMetrics();
+            activity.getWindowManager().getDefaultDisplay().getRealMetrics(metrics);
+
+            int height = metrics.heightPixels;
+            int width = metrics.widthPixels;
+            float[] wh = {width, height};
+            return wh;
+        }
+        float[] aa = {0, 0};
+        return aa;
+    }
 }
