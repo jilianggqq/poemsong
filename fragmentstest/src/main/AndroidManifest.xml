@@ -16,7 +16,11 @@
         <activity
             android:name=".MainActivity3"
             android:label="@string/title_activity_main3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!-- SoundActivity -->
         <activity android:name=".SoundActivity" />
@@ -25,11 +29,6 @@
         <activity
             android:name=".CalculateActivity"
             android:label="@string/title_activity_calculate">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

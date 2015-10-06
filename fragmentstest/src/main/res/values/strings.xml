@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">测试手机信息</string>
+    <string name="app_name">Fragments</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
