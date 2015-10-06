@@ -5,6 +5,7 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
+
     <fragment
         android:id="@+id/menu_fragment"
         android:name="com.example.peter.fragmentstest.MenuFragment"
