@@ -1,5 +1,6 @@
 package com.example.peter.fragmentstest;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,36 +14,13 @@ import peter.itu.util.ScreenUtils;
 
 public class CalculateActivity extends AppCompatActivity {
     private static final String Tag = "CalculateActivity";
-    TextView tvWH;
-    TextView tvtvDpi;
-    TextView tvWHdp;
-    TextView tvRatio;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculate);
-        tvWH = (TextView) findViewById(R.id.tvWH);
-        tvtvDpi = (TextView) findViewById(R.id.tvDpi);
-        tvWHdp = (TextView) findViewById(R.id.tvWHdp);
-        float[] wh = ScreenUtils.getWH(this);
-        tvWH.setText(String.format("%f * %f", wh[0], wh[1]));
-//        tvtvDpi.setText();
-        //dpi
-        float dpi = DensityUtils.getDpi(this);
-        tvtvDpi.setText(String.valueOf(dpi));
 
-        //ratio
-        float ratio = DensityUtils.getRatio(this);
-        tvRatio = (TextView) findViewById(R.id.tvRatio);
-        tvRatio.setText(String.valueOf(ratio));
-        //wh with dp
-        float wDp = wh[0] / ratio;
-        float hDp = wh[1] / ratio;
-        tvWHdp.setText(String.format("%f * %f", wDp, hDp));
-
-        Log.i(Tag, String.valueOf(ScreenUtils.getStatusHeight(this)));
-        Log.i(Tag, String.valueOf(ScreenUtils.getScreenHeight(this)));
     }
 
     @Override
@@ -66,4 +44,5 @@ public class CalculateActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
