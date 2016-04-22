@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">安卓服务测试</string>
+    <string name="action_settings">Service test</string>
+</resources>

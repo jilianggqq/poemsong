@@ -1,16 +1,9 @@
 package com.example.peter.fragmentstest;
 
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-
-import peter.itu.util.AppUtils;
-import peter.itu.util.DensityUtils;
-import peter.itu.util.ScreenUtils;
 
 public class CalculateActivity extends AppCompatActivity {
     private static final String Tag = "CalculateActivity";

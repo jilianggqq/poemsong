@@ -1,1 +1,1 @@
-include ':commonlibrary', ':tangshisongci', ':fragmentstest', ':screeninfo'
+include ':commonlibrary', ':tangshisongci', ':fragmentstest', ':screeninfo', ':androidservicelearning'
