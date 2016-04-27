@@ -21,6 +21,12 @@
         <item name="android:statusBarColor">@color/color_4bae4f</item>
     </style>
 
+    <style name="Theme.Translucent.Navigation" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
     <style name="Theme.ZhiHu" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <!--if this is true, android will setup navigation bar automatically.

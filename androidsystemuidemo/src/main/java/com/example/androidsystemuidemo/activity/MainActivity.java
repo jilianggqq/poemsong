@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.androidsystemuidemo.R;
+import com.example.androidsystemuidemo.activity.navigation.CloudMusicActivity;
 import com.example.androidsystemuidemo.activity.navigation.SimpleDrawerActivity;
 import com.example.androidsystemuidemo.activity.toolbar.ToolBarActivity;
 import com.example.androidsystemuidemo.activity.toolbar.ZhiHuActivity;
@@ -64,11 +65,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            Intent simpleNavigationDrawerIntent = new Intent(this, SimpleNavigationDrawerActivity.class);
 //            startActivity(simpleNavigationDrawerIntent);
 //
-//        } else if (viewId == R.id.btn_cloud_music) {
-//            Intent cloudMusicIntent = new Intent(this, CloudMusicActivity.class);
-//            startActivity(cloudMusicIntent);
-//
-//        } else if (viewId == R.id.btn_navigation_drawer_anim){
+//        }
+        else if (viewId == R.id.btn_cloud_music) {
+            Intent cloudMusicIntent = new Intent(this, CloudMusicActivity.class);
+            startActivity(cloudMusicIntent);
+
+        }
+// else if (viewId == R.id.btn_navigation_drawer_anim){
 //            Intent animIntent = new Intent(this, NavigationDrawerAnimationActivity.class);
 //            startActivity(animIntent);
 //

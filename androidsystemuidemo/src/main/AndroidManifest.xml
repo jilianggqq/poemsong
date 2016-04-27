@@ -37,6 +37,10 @@
         <activity
             android:name=".activity.navigation.SimpleDrawerActivity"
             android:label="@string/simple_drawer" />
+
+        <activity
+            android:name=".activity.navigation.CloudMusicActivity"
+            android:theme="@style/Theme.Translucent.Navigation" />
     </application>
 
 </manifest>
