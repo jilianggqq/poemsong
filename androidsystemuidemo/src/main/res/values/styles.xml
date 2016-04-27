@@ -17,6 +17,7 @@
     <style name="ColorTranslucentTheme" parent="AppTheme">
 
     </style>
+
     <style name="Theme.Translucent.Navigation" parent="AppTheme">
 
     </style>
@@ -46,5 +47,14 @@
 
     <style name="ActionButton.Overflow.ZhiHu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
         <item name="android:src">@mipmap/ic_menu_more_overflow</item>
+    </style>
+
+    <style name="Theme.Drawer.ArrowAnimation" parent="AppTheme">
+        <!-- 箭头 -->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+    <!-- 箭头颜色 -->
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
     </style>
 </resources>

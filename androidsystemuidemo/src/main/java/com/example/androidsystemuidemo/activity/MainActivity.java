@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.androidsystemuidemo.R;
 import com.example.androidsystemuidemo.activity.navigation.CloudMusicActivity;
+import com.example.androidsystemuidemo.activity.navigation.NavigationDrawerAnimationActivity;
 import com.example.androidsystemuidemo.activity.navigation.SimpleDrawerActivity;
 import com.example.androidsystemuidemo.activity.toolbar.ToolBarActivity;
 import com.example.androidsystemuidemo.activity.toolbar.ZhiHuActivity;
@@ -70,11 +71,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent cloudMusicIntent = new Intent(this, CloudMusicActivity.class);
             startActivity(cloudMusicIntent);
 
+        } else if (viewId == R.id.btn_navigation_drawer_anim) {
+            Intent animIntent = new Intent(this, NavigationDrawerAnimationActivity.class);
+            startActivity(animIntent);
+
         }
-// else if (viewId == R.id.btn_navigation_drawer_anim){
-//            Intent animIntent = new Intent(this, NavigationDrawerAnimationActivity.class);
-//            startActivity(animIntent);
-//
-//        }
     }
 }
