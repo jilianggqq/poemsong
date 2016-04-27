@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.androidsystemuidemo.R;
+import com.example.androidsystemuidemo.activity.translucentbar.BestTranslucentBarActivity;
 import com.example.androidsystemuidemo.activity.translucentbar.ColorTranslucentBarActivity;
 import com.example.androidsystemuidemo.activity.translucentbar.ImageTranslucentBarActivity;
 
@@ -40,11 +41,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(translucentBarIntent);
 
         }
-//        else if (viewId == R.id.btn_best_translucent) {
-//            Intent translucentBarIntent = new Intent(this, BestTranslucentBarActivity.class);
-//            startActivity(translucentBarIntent);
-//
-//        } else if (viewId == R.id.btn_toolbar_base) {
+        else if (viewId == R.id.btn_best_translucent) {
+            Intent translucentBarIntent = new Intent(this, BestTranslucentBarActivity.class);
+            startActivity(translucentBarIntent);
+
+        }
+//        else if (viewId == R.id.btn_toolbar_base) {
 //            Intent translucentBarIntent = new Intent(this, ToolBarActivity.class);
 //            startActivity(translucentBarIntent);
 //

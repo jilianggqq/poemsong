@@ -16,7 +16,7 @@
         <activity
             android:name=".activity.translucentbar.ImageTranslucentBarActivity"
             android:label="@string/image_translucent_bar"
-            android:theme="@style/ImageTranslucentTheme"></activity>
+            android:theme="@style/ImageTranslucentTheme" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.translucentbar.BestTranslucentBarActivity"
+            android:theme="@style/ColorTranslucentTheme" />
     </application>
 
 </manifest>
