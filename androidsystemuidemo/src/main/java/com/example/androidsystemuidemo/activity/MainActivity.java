@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.androidsystemuidemo.R;
 import com.example.androidsystemuidemo.activity.toolbar.ToolBarActivity;
+import com.example.androidsystemuidemo.activity.toolbar.ZhiHuActivity;
 import com.example.androidsystemuidemo.activity.translucentbar.BestTranslucentBarActivity;
 import com.example.androidsystemuidemo.activity.translucentbar.ColorTranslucentBarActivity;
 import com.example.androidsystemuidemo.activity.translucentbar.ImageTranslucentBarActivity;
@@ -49,12 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent translucentBarIntent = new Intent(this, ToolBarActivity.class);
             startActivity(translucentBarIntent);
 
+        } else if (viewId == R.id.btn_toolbar_zhihu) {
+            Intent translucentBarIntent = new Intent(this, ZhiHuActivity.class);
+            startActivity(translucentBarIntent);
+
         }
-// else if (viewId == R.id.btn_toolbar_zhihu) {
-//            Intent translucentBarIntent = new Intent(this, ZhiHuActivity.class);
-//            startActivity(translucentBarIntent);
-//
-//        } else if (viewId == R.id.btn_simple_drawer) {
+// else if (viewId == R.id.btn_simple_drawer) {
 //            Intent simpleDrawerIntent = new Intent(this, SimpleDrawerActivity.class);
 //            startActivity(simpleDrawerIntent);
 //

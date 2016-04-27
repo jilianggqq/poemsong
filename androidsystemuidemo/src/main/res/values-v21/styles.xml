@@ -20,4 +20,24 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:statusBarColor">@color/color_4bae4f</item>
     </style>
+
+    <style name="Theme.ZhiHu" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--if this is true, android will setup navigation bar automatically.
+        the new color will lighter than color_0176da-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <!--make the navigation bar translucent.-->
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--<item name="android:statusBarColor">@color/color_4bae4f</item>-->
+    </style>
+
+    <style name="Theme.ToolBar.ZhiHu" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--<item name="android:statusBarColor">@color/color_512da8</item>-->
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.ZhiHu</item>
+    </style>
 </resources>

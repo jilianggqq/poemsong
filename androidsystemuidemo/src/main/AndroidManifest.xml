@@ -27,7 +27,10 @@
         <activity
             android:name=".activity.translucentbar.BestTranslucentBarActivity"
             android:theme="@style/ColorTranslucentTheme" />
-        <activity android:name=".activity.toolbar.ToolBarActivity"></activity>
+        <activity android:name=".activity.toolbar.ToolBarActivity" />
+        <activity android:name=".activity.toolbar.ZhiHuActivity"
+            android:label="@string/zhi_hu"
+            android:theme="@style/Theme.ZhiHu"/>
     </application>
 
 </manifest>
