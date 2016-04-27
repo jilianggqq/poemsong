@@ -15,4 +15,7 @@
     <string name="simple_drawer">SimpleDrawer</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="item_03">Item 3</string>
+    <string name="title">标题</string>
+    <string name="sub_title">子标题</string>
 </resources>
