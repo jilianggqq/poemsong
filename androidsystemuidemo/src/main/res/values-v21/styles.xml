@@ -7,4 +7,17 @@
         <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    <!--<style name="ColorTranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--<item name="android:windowTranslucentStatus">false</item>-->
+    <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+    <!--</style>-->
+    <!--第二种办法，将系统通知栏得颜色和TAB栏得颜色分开。这里设置系统通知栏得颜色-->
+    <!--总之，系统通知栏的颜色可以和TAB的颜色分开设置"-->
+    <style name="ColorTranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@color/color_4bae4f</item>
+    </style>
 </resources>
