@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.androidsystemuidemo.R;
+import com.example.androidsystemuidemo.activity.navigation.SimpleDrawerActivity;
 import com.example.androidsystemuidemo.activity.toolbar.ToolBarActivity;
 import com.example.androidsystemuidemo.activity.toolbar.ZhiHuActivity;
 import com.example.androidsystemuidemo.activity.translucentbar.BestTranslucentBarActivity;
@@ -54,12 +55,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent translucentBarIntent = new Intent(this, ZhiHuActivity.class);
             startActivity(translucentBarIntent);
 
+        } else if (viewId == R.id.btn_simple_drawer) {
+            Intent simpleDrawerIntent = new Intent(this, SimpleDrawerActivity.class);
+            startActivity(simpleDrawerIntent);
+
         }
-// else if (viewId == R.id.btn_simple_drawer) {
-//            Intent simpleDrawerIntent = new Intent(this, SimpleDrawerActivity.class);
-//            startActivity(simpleDrawerIntent);
-//
-//        } else if (viewId == R.id.btn_simple_navigation_drawer) {
+// else if (viewId == R.id.btn_simple_navigation_drawer) {
 //            Intent simpleNavigationDrawerIntent = new Intent(this, SimpleNavigationDrawerActivity.class);
 //            startActivity(simpleNavigationDrawerIntent);
 //

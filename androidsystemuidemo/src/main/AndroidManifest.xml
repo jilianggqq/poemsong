@@ -27,10 +27,16 @@
         <activity
             android:name=".activity.translucentbar.BestTranslucentBarActivity"
             android:theme="@style/ColorTranslucentTheme" />
-        <activity android:name=".activity.toolbar.ToolBarActivity" />
-        <activity android:name=".activity.toolbar.ZhiHuActivity"
+        <activity
+            android:name=".activity.toolbar.ToolBarActivity"
+            android:label="@string/tool_bar" />
+        <activity
+            android:name=".activity.toolbar.ZhiHuActivity"
             android:label="@string/zhi_hu"
-            android:theme="@style/Theme.ZhiHu"/>
+            android:theme="@style/Theme.ZhiHu" />
+        <activity
+            android:name=".activity.navigation.SimpleDrawerActivity"
+            android:label="@string/simple_drawer" />
     </application>
 
 </manifest>
