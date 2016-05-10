@@ -40,7 +40,9 @@
         <activity
             android:name=".activity.navigation.CloudMusicActivity"
             android:theme="@style/Theme.Translucent.Navigation" />
-        <activity android:name=".activity.navigation.NavigationDrawerAnimationActivity"></activity>
+        <activity
+            android:name=".activity.navigation.NavigationDrawerAnimationActivity"
+            android:theme="@style/Theme.Translucent.Navigation"></activity>
     </application>
 
 </manifest>
