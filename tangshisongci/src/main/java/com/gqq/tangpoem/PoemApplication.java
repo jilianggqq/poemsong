@@ -26,7 +26,7 @@ public class PoemApplication extends Application {
 
 	@Override
 	public void onCreate() {
-
+        super.onCreate();
 		initDB();
 	}
 
@@ -58,7 +58,7 @@ public class PoemApplication extends Application {
 
 	public static void restoreDB() throws IOException {
 		// sd file
-		File sdFile = new File("/storage/emulated/0/tangshiapp/tangshi.db");
+		File sdFile = new File(SD_PATH);
 		if (!sdFile.exists()) {
 			throw new IOException("数据库文件不存在");
 		}
