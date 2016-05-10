@@ -357,7 +357,7 @@ public class MainActivity extends BaseActivity implements OnGestureListener, OnT
             dialogWindow.setGravity(Gravity.BOTTOM | Gravity.CENTER);
             WindowManager.LayoutParams lp = dialogWindow.getAttributes();
             lp.alpha = 0.7f;
-            // lp.height = 500;
+//             lp.height = 500;
             lp.width = w_screen;
             lp.x -= 180;
             dialogWindow.setAttributes(lp);
